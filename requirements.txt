@@ -1,0 +1,4 @@
+fastf1==3.6.0
+matplotlib
+seaborn
+pandas
