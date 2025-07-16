@@ -15,8 +15,12 @@ session.load()
 drivers = ['VER', 'ALO']
 
 # 圈速趋势图
-plot_lap_times(session, drivers)
+fig1 = plot_lap_times(session, drivers)
+if fig1:
+    fig1.show()
 
 # 用胎策略图,它会绘制该车手的轮胎使用条形图，展示每一段 stint 使用的是哪种轮胎、持续多少圈
 for driver in drivers:
-    plot_tyre_strategy(session.laps, driver)
+    fig2 = plot_tyre_strategy(session.laps, driver)
+    if fig2:
+        fig2.show()
